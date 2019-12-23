@@ -27,22 +27,22 @@ func main() {
 	// Useful for counters in loops
 	var i int
 	i = 42
-	fmt.Prinln(i)
+	fmt.Println(i)
 
 	// Change the value
 	i = 27
-	fmt.Prinln(i)
+	fmt.Println(i)
 
 	// Declare the variable and assign value
 	// on the same line
 	// Useful for finer-grained control over type
 	var j int = 39
-	fmt.Prinln(j)
+	fmt.Println(j)
 
 	// Go can figure out the type on its own
 	// For numbers, will only do into or float64
 	k := 84
-	fmt.Prinln(k)
+	fmt.Println(k)
 
 	// Replace Println with Printf for formatting
 	// %v is a value. %T is the variable type
@@ -78,10 +78,12 @@ func main() {
 
 	var p string
 	p = string(o)
+	fmt.Printf("%v, %T\n", p, p)
 	// fmt.Printf("%v, %T\n", o, o)
 	// The above produces a unicode value not a string
 	// Conversion to string requires strconv package
 	// https://golang.org/pkg/strconv/ for useage instructions
 	p = strconv.Itoa(o)
+	fmt.Printf("%v, %T\n", p, p)
 
 }
